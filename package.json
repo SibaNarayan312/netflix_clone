@@ -1,0 +1,19 @@
+{
+  "name": "streamflix-full-stack",
+  "version": "1.0.0",
+  "description": "A full stack Netflix-inspired streaming dashboard with authentication, catalog browsing, search, profiles, and watchlist APIs.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "netflix-clone",
+    "nodejs",
+    "full-stack",
+    "javascript",
+    "rest-api"
+  ],
+  "author": "",
+  "license": "MIT"
+}

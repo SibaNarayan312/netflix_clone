@@ -1,0 +1,217 @@
+{
+  "users": [
+    {
+      "id": "u-demo",
+      "name": "Demo User",
+      "email": "demo@streamflix.com",
+      "password": "password123",
+      "plan": "Premium",
+      "avatarColor": "#e50914",
+      "watchlist": [
+        "last-orbit",
+        "code-red"
+      ],
+      "continueWatching": [
+        {
+          "titleId": "code-red",
+          "progress": 31,
+          "updatedAt": "2026-05-20T05:26:26.791Z"
+        },
+        {
+          "titleId": "midnight-city",
+          "progress": 53,
+          "updatedAt": "2026-05-20T05:26:06.225Z"
+        },
+        {
+          "titleId": "northern-lights",
+          "progress": 31,
+          "updatedAt": "2026-05-19T18:30:00.000Z"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "token": "ac70ea7cc9b73f736fefdbe93fbc29609f63709252adfccd",
+      "userId": "u-demo",
+      "createdAt": "2026-05-20T05:12:37.315Z"
+    }
+  ],
+  "catalog": [
+    {
+      "id": "midnight-city",
+      "title": "Midnight City",
+      "type": "Series",
+      "year": 2026,
+      "rating": "TV-MA",
+      "runtime": 52,
+      "match": 98,
+      "featured": true,
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "cast": [
+        "Aarav Mehta",
+        "Nora West",
+        "Ishaan Rao"
+      ],
+      "description": "A cybercrime detective follows encrypted clues across Mumbai after a city-wide blackout reveals a hidden surveillance network.",
+      "tone": "tense",
+      "color": "#b91c1c"
+    },
+    {
+      "id": "last-orbit",
+      "title": "The Last Orbit",
+      "type": "Movie",
+      "year": 2025,
+      "rating": "PG-13",
+      "runtime": 121,
+      "match": 94,
+      "featured": false,
+      "genres": [
+        "Sci-Fi",
+        "Adventure"
+      ],
+      "cast": [
+        "Maya Chen",
+        "Dev Patel",
+        "Lena Ortiz"
+      ],
+      "description": "When a rescue pilot discovers a failing space station is carrying forbidden research, one final orbit becomes humanity's best chance.",
+      "tone": "epic",
+      "color": "#2563eb"
+    },
+    {
+      "id": "code-red",
+      "title": "Code Red",
+      "type": "Series",
+      "year": 2024,
+      "rating": "TV-14",
+      "runtime": 44,
+      "match": 91,
+      "featured": false,
+      "genres": [
+        "Action",
+        "Crime"
+      ],
+      "cast": [
+        "Riya Sen",
+        "Cole Brooks",
+        "Tara Singh"
+      ],
+      "description": "An emergency response unit races against impossible odds while a mole leaks every move to the criminals they chase.",
+      "tone": "fast",
+      "color": "#dc2626"
+    },
+    {
+      "id": "northern-lights",
+      "title": "Northern Lights",
+      "type": "Movie",
+      "year": 2023,
+      "rating": "U/A 13+",
+      "runtime": 106,
+      "match": 89,
+      "featured": false,
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "cast": [
+        "Elena Frost",
+        "Kabir Khan",
+        "Mina Park"
+      ],
+      "description": "A travel photographer and a climate scientist meet in Norway, where one winter changes the future they thought they wanted.",
+      "tone": "warm",
+      "color": "#0891b2"
+    },
+    {
+      "id": "street-food-files",
+      "title": "Street Food Files",
+      "type": "Series",
+      "year": 2026,
+      "rating": "TV-PG",
+      "runtime": 38,
+      "match": 96,
+      "featured": false,
+      "genres": [
+        "Documentary",
+        "Food"
+      ],
+      "cast": [
+        "Anika Rao",
+        "Mateo Cruz"
+      ],
+      "description": "Chefs, vendors, and families reveal the stories behind the world's most beloved night-market dishes.",
+      "tone": "fresh",
+      "color": "#f97316"
+    },
+    {
+      "id": "heist-protocol",
+      "title": "Heist Protocol",
+      "type": "Movie",
+      "year": 2026,
+      "rating": "TV-MA",
+      "runtime": 117,
+      "match": 93,
+      "featured": false,
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "cast": [
+        "Jon Bell",
+        "Samira Voss",
+        "Kenji Ito"
+      ],
+      "description": "A retired thief is pulled back for one impossible job: stealing an algorithm before it predicts every move she makes.",
+      "tone": "slick",
+      "color": "#7c3aed"
+    },
+    {
+      "id": "after-school",
+      "title": "After School",
+      "type": "Series",
+      "year": 2025,
+      "rating": "U/A 16+",
+      "runtime": 35,
+      "match": 87,
+      "featured": false,
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "cast": [
+        "Priya Kapoor",
+        "Alex Reed",
+        "Zoya Malik"
+      ],
+      "description": "Five students build a secret radio station and accidentally become the voice of their entire town.",
+      "tone": "bright",
+      "color": "#16a34a"
+    },
+    {
+      "id": "deep-current",
+      "title": "Deep Current",
+      "type": "Movie",
+      "year": 2024,
+      "rating": "PG-13",
+      "runtime": 109,
+      "match": 88,
+      "featured": false,
+      "genres": [
+        "Mystery",
+        "Adventure"
+      ],
+      "cast": [
+        "Noah Vale",
+        "Jules Hart",
+        "Ava Stone"
+      ],
+      "description": "A marine archaeologist uncovers a signal under the Indian Ocean that points to a lost expedition and a living secret.",
+      "tone": "mysterious",
+      "color": "#0f766e"
+    }
+  ]
+}
