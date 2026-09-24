@@ -24,7 +24,7 @@ The original application has been extended with a local CI/CD-style DevOps workf
 - [How the deployment works](#how-the-deployment-works)
 - [DevOps architecture](#devops-architecture)
 - [Deployment verification](#deployment-verification)
-- [Screenshots](#screenshots)
+- [Implementation screenshots](#implementation-screenshots)
 - [Resume highlights](#resume-highlights)
 - [Learning outcomes](#learning-outcomes)
 - [Future improvements](#future-improvements)
@@ -92,21 +92,35 @@ The server is available at `http://localhost:3000`. Protected endpoints require 
 
 ```text
 netflix_clone/
-├── data/
-│   └── db.json                  # Catalog, user, session, and progress data
-├── image/
-│   └── devops-architecture.png # Deployment architecture diagram
-├── public/
-│   ├── assets/                  # Local image and SVG assets
-│   ├── app.js                   # Client-side application logic
-│   ├── index.html
-│   └── styles.css
-├── .gitignore
-├── Dockerfile
-├── package.json
-├── package-lock.json
-├── README.md
-└── server.js                    # Static-file server and REST API
+|-- data/
+|   `-- db.json                  # Catalog, user, session, and progress data
+|-- image/
+|   |-- devops-architecture.png # Deployment architecture diagram
+|   `-- screenshots/            # Application and DevOps evidence
+|       |-- docker-container.png
+|       |-- final-deployment.png
+|       |-- github-repository.png
+|       |-- github-webhook-delivery.png
+|       |-- github-webhook-events.png
+|       |-- github-webhook-settings.png
+|       |-- jenkins-build-steps.png
+|       |-- jenkins-build.png
+|       |-- jenkins-console-final.png
+|       |-- jenkins-console.png
+|       |-- jenkins-source-control.png
+|       |-- jenkins-triggers.png
+|       `-- streamflix-app.png
+|-- public/
+|   |-- assets/                  # Local image and SVG assets
+|   |-- app.js                   # Client-side application logic
+|   |-- index.html
+|   `-- styles.css
+|-- .gitignore
+|-- Dockerfile
+|-- package.json
+|-- package-lock.json
+|-- README.md
+`-- server.js                    # Static-file server and REST API
 ```
 
 ## Run locally
@@ -215,21 +229,75 @@ Expected health response:
 {"status":"ok","app":"StreamFlix API"}
 ```
 
-You can also open [http://localhost:3000](http://localhost:3000) in a browser. The latest verified deployment was image `netflix-clone:5`.
+You can also open [http://localhost:3000](http://localhost:3000) in a browser. The latest verified deployment was image `netflix-clone:6`.
 
-## Screenshots
+## Implementation screenshots
 
-Screenshots will be added here after capture.
+### StreamFlix application
 
-<!-- TODO: Add screenshot — StreamFlix application -->
-<!-- TODO: Add screenshot — GitHub repository -->
-<!-- TODO: Add screenshot — Docker container -->
-<!-- TODO: Add screenshot — Jenkins job configuration -->
-<!-- TODO: Add screenshot — Jenkins successful build -->
-<!-- TODO: Add screenshot — Jenkins console output -->
-<!-- TODO: Add screenshot — GitHub webhook configuration -->
-<!-- TODO: Add screenshot — GitHub webhook successful delivery -->
-<!-- TODO: Add screenshot — Automated deployment result -->
+![StreamFlix Application](image/screenshots/streamflix-app.png)
+
+The full-stack streaming dashboard running locally.
+
+### GitHub repository
+
+![GitHub Repository Structure](image/screenshots/github-repository.png)
+
+The repository containing the StreamFlix application and deployment documentation.
+
+### Docker deployment
+
+![Running Docker Container](image/screenshots/docker-container.png)
+
+The running `netflix-app` container that exposes StreamFlix on port `3000`.
+
+### Jenkins configuration
+
+![Jenkins Source Control Configuration](image/screenshots/jenkins-source-control.png)
+
+Jenkins Git/source configuration for the repository.
+
+![Jenkins GitHub Webhook Trigger Configuration](image/screenshots/jenkins-triggers.png)
+
+The Jenkins trigger that accepts GitHub webhook events.
+
+![Jenkins Docker Deployment Build Step](image/screenshots/jenkins-build-steps.png)
+
+The build step that builds the image and replaces the running container.
+
+### Jenkins execution
+
+![Jenkins Successful Build History](image/screenshots/jenkins-build.png)
+
+Successful build history for `Netflix-Clone-Deployment`.
+
+![Jenkins Console Checkout and Docker Build](image/screenshots/jenkins-console.png)
+
+Console output showing repository checkout and Docker image build activity.
+
+![Jenkins Final Deployment Result](image/screenshots/jenkins-console-final.png)
+
+Successful completion after the new container has been started.
+
+### GitHub webhook
+
+![GitHub Webhook Settings](image/screenshots/github-webhook-settings.png)
+
+The webhook endpoint and JSON content type configuration used to reach Jenkins through ngrok.
+
+![GitHub Webhook Events](image/screenshots/github-webhook-events.png)
+
+The active push-event webhook configuration.
+
+![GitHub Webhook Successful Delivery](image/screenshots/github-webhook-delivery.png)
+
+A successful push-event delivery from GitHub to the webhook endpoint.
+
+### Final deployment
+
+![Final StreamFlix Deployment](image/screenshots/final-deployment.png)
+
+The deployed StreamFlix application available at `http://localhost:3000` after the automated container replacement.
 
 ## Resume highlights
 
