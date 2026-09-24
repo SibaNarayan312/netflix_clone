@@ -1,80 +1,61 @@
-# StreamFlix Full Stack
+# StreamFlix Full Stack — Automated DevOps Deployment
 
-A resume-ready Netflix-inspired full stack streaming dashboard built with Node.js and vanilla JavaScript. The app includes authentication-style flows, a REST API, catalog search, genre/type filters, watchlist persistence, and continue-watching progress.
+A resume-ready Netflix-inspired full stack streaming dashboard built from scratch using Node.js and vanilla JavaScript.
 
-## Features
+The application includes authentication-style flows, a REST API, catalog search, genre/type filters, watchlist persistence, and continue-watching progress.
+
+The project has been extended with an automated DevOps deployment pipeline using **GitHub, Jenkins, Docker, and GitHub Webhooks**. Every push to the `main` branch can automatically trigger a Jenkins build that creates a new Docker image and deploys the latest version of the application.
+
+---
+
+## 🚀 Features
+
+### Application Features
 
 - Responsive streaming dashboard with hero title, catalog, watchlist, viewing progress, and plan cards
 - Node.js backend using the built-in HTTP module
-- REST APIs for auth, catalog, genres, stats, watchlist, and progress
+- REST APIs for authentication, catalog, genres, stats, watchlist, and progress
 - JSON file persistence in `data/db.json`
 - Demo account for quick testing
+- Catalog search and filtering
+- Genre/type filters
+- Watchlist management
+- Continue-watching progress
 - No external backend dependencies, so the project runs easily on any machine with Node.js
 
-## Tech Stack
+### DevOps Features
 
-- Frontend: HTML, CSS, JavaScript
-- Backend: Node.js REST API
-- Database: JSON file storage
-- Assets: Local SVG/logo and background image
+- Dockerized Node.js application
+- Jenkins automated deployment
+- GitHub Webhook integration
+- Automated Docker image building
+- Automated container replacement
+- Build-number-based Docker image tagging
+- GitHub push-triggered deployment
 
-## Demo Login
+---
+
+## 🛠️ Tech Stack
+
+### Application
+
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Node.js REST API
+- **Database:** JSON file storage
+- **Assets:** Local SVG/logo and background image
+
+### DevOps
+
+- **Version Control:** Git & GitHub
+- **Containerization:** Docker
+- **CI/CD Automation:** Jenkins
+- **Webhook:** GitHub Webhooks
+- **Local Tunnel:** ngrok
+
+---
+
+## 🔐 Demo Login
 
 ```text
 Email: demo@streamflix.com
 Password: password123
-```
-
-## Run Locally
-
-```bash
-cd "Netflix Full Stack"
-npm start
-```
-
-Open:
-
-```text
-http://127.0.0.1:3000
-```
-
-## API Endpoints
-
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | `/api/health` | Server health check |
-| POST | `/api/auth/login` | Sign in and receive a token |
-| POST | `/api/auth/register` | Create a new account |
-| POST | `/api/auth/logout` | Remove current session |
-| GET | `/api/me` | Get signed-in user |
-| GET | `/api/catalog` | List and filter titles |
-| GET | `/api/featured` | Get featured hero title |
-| GET | `/api/genres` | Get catalog genres |
-| GET | `/api/stats` | Get dashboard stats |
-| GET | `/api/watchlist` | Get signed-in user's watchlist |
-| POST | `/api/watchlist/:id` | Add title to watchlist |
-| DELETE | `/api/watchlist/:id` | Remove title from watchlist |
-| POST | `/api/progress/:id` | Save continue-watching progress |
-
-## Resume Highlights
-
-- Built a full stack streaming platform clone with custom REST APIs and client-side state management.
-- Implemented token-based session handling, protected watchlist routes, and persistent JSON storage.
-- Designed a responsive UI with catalog filtering, authenticated user state, and dynamic rendering from backend data.
-
-## Project Structure
-
-```text
-Netflix Full Stack/
-  data/
-    db.json
-  public/
-    assets/
-      bg.jpg
-      logo.svg
-    app.js
-    index.html
-    styles.css
-  package.json
-  server.js
-```
